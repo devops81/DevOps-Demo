@@ -36,8 +36,8 @@
                             
                       
                                sh '''
-                               echo "${workspace}"
-                                cd "${workspace}/examples/feed-combiner-java8-webapp"
+                               echo "${env.WORKSPACE}"
+                                cd "${env.WORKSPACE}/examples/feed-combiner-java8-webapp"
                                 mvn clean install
                                 '''   }
                     }
