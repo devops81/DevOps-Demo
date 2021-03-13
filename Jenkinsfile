@@ -111,7 +111,10 @@
                     
                   
                 }
-                
+                post {
+        always {
+            junit 'examples/feed-combiner-java8-webapp/target/surefire-reports/*.xml'
+        }
                 
             }
                    
