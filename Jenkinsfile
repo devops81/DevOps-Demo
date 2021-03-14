@@ -38,7 +38,7 @@
                                sh '''
                                echo "${WORKSPACE}"
                                 cd "${WORKSPACE}/examples/feed-combiner-java8-webapp"
-                                mvn clean install
+                                mvn clean -Dmaven.test.skip=true  install
                                 '''   }
                     }
                     
