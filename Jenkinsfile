@@ -67,7 +67,8 @@
 
 steps
 {
-
+def sonarScanner(projectKey) {
+    def scannerHome = tool 'SonarQubeScanner'
     withSonarQubeEnv("sonarqube") {
         if(fileExists("sonar-project.properties")) {
             sh "${scannerHome}/bin/sonar-scanner"
@@ -80,6 +81,7 @@ steps
         waitForQualityGate abortPipeline: true
     }
 }
+   
 }
 }
                             stage('Building image') {
