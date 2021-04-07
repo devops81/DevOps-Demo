@@ -47,7 +47,7 @@
                                         steps{
                                                     withSonarQubeEnv('SonarServer')
                                                     {
-                                                                dir('${WORKSPACE}/examples/feed-combiner-java8-webapp')
+                                                                dir('examples/feed-combiner-java8-webapp')
                                                                 {
                                                                             sh 'sh mvn sonar:sonar'
                                                                 }
