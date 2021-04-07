@@ -3,8 +3,7 @@
                                     registry = "devops81/devops"
                                     registryCredential = 'dockerhub'
                                     dockerImage = ''
-                            def sonarScanner(projectKey) {
-                            def scannerHome = tool 'SonarQubeScanner'
+                            
                                     }
                 agent {
                     label "master"
