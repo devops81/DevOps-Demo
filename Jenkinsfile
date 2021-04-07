@@ -41,20 +41,7 @@
                                 mvn clean -Dmaven.test.skip=false  install
                                 '''   }
                     }
-                            stage('SonarQube Analysis')
-                            {
-                                        
-                                        steps{
-                                                    withSonarQubeEnv('SonarServer')
-                                                    {
-                                                                dir('examples/feed-combiner-java8-webapp')
-                                                                {
-                                                                            sh 'mvn sonar:sonar'
-                                                                }
-                                                    }
-                                                    
-                                        }
-                            }
+                          
                     
                       stage ('Generate JUNIT REPORT') {
                          steps {
@@ -73,6 +60,20 @@
                                  )
                         } 
                     }
+                              stage('SonarQube Analysis')
+                            {
+                                        
+                                        steps{
+                                                    withSonarQubeEnv('SonarServer')
+                                                    {
+                                                                dir('examples/feed-combiner-java8-webapp')
+                                                                {
+                                                                            sh 'mvn sonar:sonar'
+                                                                }
+                                                    }
+                                                    
+                                        }
+                            }
                             stage('Building image') {
                                     steps{
                                                 script {
