@@ -41,6 +41,20 @@
                                 mvn clean -Dmaven.test.skip=false  install
                                 '''   }
                     }
+                            stage('SonarQube Analysis')
+                            {
+                                        
+                                        steps{
+                                                    withSonarQubeEnv('SonarServer')
+                                                    {
+                                                                dir('${WORKSPACE}/examples/feed-combiner-java8-webapp')
+                                                                {
+                                                                            sh 'sh mvn sonar:sonar'
+                                                                }
+                                                    }
+                                                    
+                                        }
+                            }
                     
                       stage ('Generate JUNIT REPORT') {
                          steps {
