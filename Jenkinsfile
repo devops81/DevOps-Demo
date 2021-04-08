@@ -67,8 +67,7 @@
     SCANNER_HOME = tool 'SonarQubeScanner'
     
   }
-steps
-{
+
 
   steps {
     withSonarQubeEnv('sonarqube') {
@@ -78,7 +77,7 @@ steps
         -Dsonar.sources=.'''
     }
   }
-}  
+ 
 }
 
                             stage('Building image') {
