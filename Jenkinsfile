@@ -71,7 +71,7 @@
 
   steps {
     withSonarQubeEnv('sonarqube') {
-        sh '$SCANNER_HOME/bin/sonar-scanner -Dsonar.projectKey=SampleProject -Dsonar.sources=/examples/feed-combiner-java8-webapp/src/main/java -Dsonar.java.binaries=/examples/feed-combiner-java8-webapp/target/classes'
+        sh '$SCANNER_HOME/bin/sonar-scanner -Dsonar.projectKey=SampleProject -Dsonar.sources=/var/lib/jenkins/workspace/JavaPipeline/examples/feed-combiner-java8-webapp/src/main/java -Dsonar.java.binaries=/var/lib/jenkins/workspace/JavaPipeline/examples/feed-combiner-java8-webapp/target/classes'
         
     }
   }
