@@ -71,7 +71,7 @@
 
   steps {
     withSonarQubeEnv('sonarqube') {
-        sh '''$SCANNER_HOME/bin/sonar-scanne -Dsonar.java.binaries=build/classes/java/ \
+        sh '''$SCANNER_HOME/bin/sonar-scanner -Dsonar.java.binaries=build/classes/java/ \
         -Dsonar.projectKey=SampleProject \
         -Dsonar.sources=.'''
     }
