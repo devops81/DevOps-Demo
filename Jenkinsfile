@@ -8,7 +8,7 @@
                 agent {
                     label "master"
                 }
-           properties([[$class: 'JiraProjectProperty'], parameters([string(defaultValue: '', description: '', name: 'BranchName', trim: false)])])
+           
            /* triggers {
                         //Execute weekdays every four hours starting at minute 0
                         cron('* * * * *')
@@ -19,6 +19,7 @@
             
                 }
                 stages {
+                            properties([[$class: 'JiraProjectProperty'], parameters([string(defaultValue: '', description: '', name: 'BranchName', trim: false)])])
                     stage ('Initialize') {
                         steps {
                             sh '''
