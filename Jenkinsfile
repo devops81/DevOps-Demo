@@ -27,6 +27,13 @@
                                                     }   
                                         }
                             }
+                            stage('branch check')
+                            {
+                                        when { branch "master"}
+                                        steps {
+                                                    echo we are in ${env.BranchName} Branch
+                                        }
+                            }
                     stage ('Initialize') {
                         steps {
                             sh '''
