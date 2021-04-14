@@ -8,10 +8,11 @@
                 agent {
                     label "master"
                 }
-            triggers {
+           properties([[$class: 'JiraProjectProperty'], parameters([string(defaultValue: '', description: '', name: 'BranchName', trim: false)])])
+           /* triggers {
                         //Execute weekdays every four hours starting at minute 0
                         cron('* * * * *')
-                     }
+                     } */
                         
                 tools {
                     maven 'maven3'
