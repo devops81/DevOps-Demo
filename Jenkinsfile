@@ -19,7 +19,14 @@
             
                 }
                 stages {
-                            properties([[$class: 'JiraProjectProperty'], parameters([string(defaultValue: '', description: '', name: 'BranchName', trim: false)])])
+                            stage('Setup parameters')
+                            {
+                                        steps{
+                                                    script  {
+                                                                properties([[$class: 'JiraProjectProperty'], parameters([string(defaultValue: '', description: '', name: 'BranchName', trim: false)])]) 
+                                                    }   
+                                        }
+                            }
                     stage ('Initialize') {
                         steps {
                             sh '''
