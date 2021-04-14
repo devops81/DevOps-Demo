@@ -29,7 +29,7 @@
                             }
                             stage('branch check')
                             {
-                                        when { branch "master"}
+                                        when { branch "DPLSonarScan"}
                                         steps {
                                                     echo "we are in ${env.BranchName} Branch"
                                         }
