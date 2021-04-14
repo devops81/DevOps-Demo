@@ -8,6 +8,10 @@
                 agent {
                     label "master"
                 }
+            triggers {
+                        //Execute weekdays every four hours starting at minute 0
+                        cron('* * * * *')
+                     }
                         
                 tools {
                     maven 'maven3'
