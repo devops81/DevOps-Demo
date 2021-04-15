@@ -9,10 +9,13 @@
                     label "master"
                 }
            
-          triggers {
+   
                         //Execute weekdays every four hours starting at minute 0
-                       properties([[$class: 'JiraProjectProperty'], pipelineTriggers([upstream('TriggerExample, ')])])
-                     } 
+                       triggers {
+    cron('0 10 * * *')
+    upstream(upstreamProjects: "TriggerExample", threshold: hudson.model.Result.SUCCESS)
+}
+                
                         
                 tools {
                     maven 'maven3'
