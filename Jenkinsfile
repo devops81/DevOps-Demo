@@ -9,10 +9,10 @@
                     label "master"
                 }
            
-           /* triggers {
+          triggers {
                         //Execute weekdays every four hours starting at minute 0
-                        cron('* * * * *')
-                     } */
+                       properties([[$class: 'JiraProjectProperty'], pipelineTriggers([upstream('TriggerExample, ')])])
+                     } 
                         
                 tools {
                     maven 'maven3'
