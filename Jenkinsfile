@@ -8,12 +8,12 @@
                 agent {
                     label "master"
                 }
-           
+        
    
                         //Execute weekdays every four hours starting at minute 0
                        triggers {
-    cron('0 10 * * *')
-    upstream(upstreamProjects: "TriggerExample", threshold: hudson.model.Result.SUCCESS)
+     cron('* * * * *')
+     upstream(upstreamProjects: "TriggerExample", threshold: hudson.model.Result.SUCCESS)
 }
                 
                         
