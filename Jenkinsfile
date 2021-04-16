@@ -12,7 +12,7 @@
    
                         //Execute weekdays every four hours starting at minute 0
                        triggers {
-     cron('* * * * *')
+     pollSCM('* * * * *')
      /*upstream(upstreamProjects: "TriggerExample", threshold: hudson.model.Result.SUCCESS)*/
 }
                 
