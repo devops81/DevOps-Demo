@@ -8,9 +8,9 @@
                 agent {
                     label "master"
                 }
-                         triggers {
+                         /*triggers {
                                     pollSCM('* * * * *')
-                                  }
+                                  } */
                 tools {
                     maven 'maven3'
             
