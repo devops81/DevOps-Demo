@@ -61,30 +61,8 @@
                                  )
                         } 
                     }
-                              stage('SonarScan')
-{
-
-steps
-{
-script {
-def sonarScanner(projectKey) {
-    def scannerHome = tool 'SonarQubeScanner'
-    withSonarQubeEnv("sonarqube") {
-        if(fileExists("sonar-project.properties")) {
-            sh "${scannerHome}/bin/sonar-scanner"
-        }
-        else {
-            sh "${scannerHome}/bin/sonar-scanner -     Dsonar.projectKey=${projectKey} -Dsonar.java.binaries=build/classes -Dsonar.java.libraries=**/*.jar -Dsonar.projectVersion=${BUILD_NUMBER}"
-        }
-    }
-    timeout(time: 10, unit: 'MINUTES') {
-        waitForQualityGate abortPipeline: true
-    }
-}
- }  
-}
-}
-                            stage('Building image') {
+                              
+                           /* stage('Building image') {
                                     steps{
                                                 script {
                                                             dockerImage = docker.build registry + ":$BUILD_NUMBER"
@@ -98,9 +76,9 @@ def sonarScanner(projectKey) {
                          sh "docker login --username $USERNAME --password $PASSWORD"
                     }
                }
-          }
+          }*/
                             
-                             stage("Docker push") {
+                             /*stage("Docker push") {
                                     steps {
                                     sh "docker push devops81/devops:$BUILD_NUMBER"
                                           }
@@ -112,7 +90,7 @@ def sonarScanner(projectKey) {
                             echo 'I can copy stuffs here'
                             
                         }
-                    }
+                    }*/
                     stage ('Send out email Notification') {
                         agent {
                             label "master"
