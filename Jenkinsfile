@@ -61,6 +61,14 @@
                                  )
                         } 
                     }
+                            stage('Running on master') {
+                                        agent {
+                                                    label 'master'
+                                        }
+                                        steps {
+                                                    echo "It will run on master server"
+                                        }
+                            }
                               
                            /* stage('Building image') {
                                     steps{
