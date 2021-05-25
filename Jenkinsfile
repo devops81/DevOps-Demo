@@ -64,7 +64,7 @@
                                                     label 'master'
                                         }
                                         steps {
-                                                    echo "It will run on master server"
+                                                    echo "hostname"
                                         }
                             }
                               
