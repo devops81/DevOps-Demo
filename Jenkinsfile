@@ -9,7 +9,7 @@
                     label "Linux-Node"
                 }
                          triggers {
-                                    pollSCM('* * * * *')
+                                   
                                   }
                 tools {
                     maven 'maven3'
