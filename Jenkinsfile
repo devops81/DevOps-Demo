@@ -6,7 +6,7 @@
                             
                                     }
                 agent {
-                    label "master"
+                    label "Linux-Node"
                 }
                          triggers {
                                     pollSCM('* * * * *')
