@@ -8,9 +8,7 @@
                 agent {
                     label "Linux-Node"
                 }
-                         triggers {
-                                   
-                                  }
+                        
                 tools {
                     maven 'maven3'
             
