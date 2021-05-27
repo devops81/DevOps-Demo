@@ -119,10 +119,10 @@
             junit 'examples/feed-combiner-java8-webapp/target/surefire-reports/*.xml'
         }
                              failure {
-            build "MYPROJECT"
+            build 'MYPROJECT'
         }
                          success {
-            build "SecondJob"
+            build 'SecondJob'
         }
                 
             }
