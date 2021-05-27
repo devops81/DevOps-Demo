@@ -119,10 +119,10 @@
             junit 'examples/feed-combiner-java8-webapp/target/surefire-reports/*.xml'
         }
                              failure {
-            echo "I am in failure section"
+            build "MYPROJECT"
         }
                          success {
-            echo "I am in success section"
+            build "SecondJob"
         }
                 
             }
