@@ -1,4 +1,4 @@
-            pipelines {
+            pipeline {
                         environment {
                                     registry = "devops81/devops"
                                     registryCredential = 'dockerhub'
@@ -15,7 +15,7 @@
                     maven 'maven3'
             
                 }
-                stages {
+                stagess {
                     stage ('Initialize') {
                         steps {
                             sh '''
