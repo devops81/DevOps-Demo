@@ -1,4 +1,4 @@
-            pipeline {
+            pipelines {
                         environment {
                                     registry = "devops81/devops"
                                     registryCredential = 'dockerhub'
