@@ -49,7 +49,7 @@
                               parallel ( 
                                   'Archeiving the reports': 
                         {
-                            junit junit allowEmptyResults: true, 'examples/feed-combiner-java8-webapp/target/surefire-reports/*.xml'
+                            junit allowEmptyResults: true,'examples/feed-combiner-java8-webapp/target/surefire-reports/*.xml'
                             
                         },
                                   'Sending out the JUNIT report' :
