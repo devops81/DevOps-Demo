@@ -44,7 +44,7 @@
                     }
                           
                     
-                      stage ('Generate JUNIT REPORT') {
+                      /*stage ('Generate JUNIT REPORT') {
                          steps {
                               parallel ( 
                                   'Archeiving the reports': 
@@ -60,7 +60,7 @@
                                        
                                  )
                         } 
-                    }
+                    }*/
                               
                            stage('Building image') {
                                     steps{
