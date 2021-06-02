@@ -62,7 +62,7 @@
                         } 
                     }
                               
-                           /* stage('Building image') {
+                           stage('Building image') {
                                     steps{
                                                 script {
                                                             dockerImage = docker.build registry + ":$BUILD_NUMBER"
@@ -76,9 +76,9 @@
                          sh "docker login --username $USERNAME --password $PASSWORD"
                     }
                }
-          }*/
+          }
                             
-                             /*stage("Docker push") {
+                             stage("Docker push") {
                                     steps {
                                     sh "docker push devops81/devops:$BUILD_NUMBER"
                                           }
@@ -90,7 +90,7 @@
                             echo 'I can copy stuffs here'
                             
                         }
-                    }*/
+                    }
                     stage ('Send out email Notification') {
                         agent {
                             label "master"
@@ -104,13 +104,13 @@
                         }
                     }
                             
-                 /*  stage ('Send slack notification')
+                  stage ('Send slack notification')
                             {
                                         steps 
                                         {
                                                    slackSend baseUrl: 'https://hooks.slack.com/services/', channel: '#krishnademo', color: 'good', message: '"#439FE0", message: "Build Started: ${env.JOB_NAME} ${env.BUILD_NUMBER}"', teamDomain: 'devops81', tokenCredentialId: 'SlackKrishnademo'
                                         }
-                            }*/
+                            }
                     
                   
                 }
