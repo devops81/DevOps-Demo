@@ -44,23 +44,7 @@
                     }
                           
                     
-                      /*stage ('Generate JUNIT REPORT') {
-                         steps {
-                              parallel ( 
-                                  'Archeiving the reports': 
-                        {
-                            junit allowEmptyResults:true,examples/feed-combiner-java8-webapp/target/surefire-reports/*.xml
-                            
-                        },
-                                  'Sending out the JUNIT report' :
-                                  {                  
-                                     echo "Test email" /*emailext body: 'Junits reporting getting archived', subject: 'junit update', to: 'devops81@gmail.com'*/
-                                 }
-                                          
-                                       
-                                 )
-                        } 
-                    }*/
+ 
                               
                            stage('Building image') {
                                     steps{
@@ -114,20 +98,6 @@
                     
                   
                 }
-                /* post {
-        always {
-            junit 'examples/feed-combiner-java8-webapp/target/surefire-reports/*.xml'
-        }
-                             failure {
-            build 'MYPROJECT'
-        }
-                         success {
-            build 'SecondJob'
-        }
-                
-            } */
-                   
-                    
-                        
+                                       
             
 }
