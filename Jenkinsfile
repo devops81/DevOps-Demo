@@ -6,7 +6,7 @@
                             
                                     }
                 agent {
-                    label "master"
+                    label "LinuxAgen-01"
                 }
                         /* triggers {
                                     pollSCM('* * * * *')
