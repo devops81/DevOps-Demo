@@ -3,6 +3,7 @@ target/
 
 # gradle noise
 .gradlesa
+.vs
 
 # osx noise
 .DS_Store
